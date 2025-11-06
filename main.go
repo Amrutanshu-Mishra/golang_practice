@@ -3,23 +3,31 @@ package main
 import "fmt"
 
 func main() {
+	// var ages [3]int = [3]int{20,25,30}
+	// var newAges=[3]int{20,25,30}
+	// fmt.Print(ages,newAges)
 
-	age := 23
-	name := "Amrutanshu"
-	//Print
-	fmt.Print("hello, ")
-	fmt.Print("world!\n")
-	fmt.Print("new line\n")
-
-	fmt.Println("hello ninjas!")
-	fmt.Println("goodbye ninjas!")
-	// fmt.Println("my age is",age)
-
-	//formatted string same as C language use %v to directly get the variable data types
-	fmt.Printf("my age is %q and my name is %q \n", age, name)
-	fmt.Printf("age is of type %T\n", age);
-	fmt.Printf("you scored %0.1f points!\n", 10.12);
+	// // fmt.Println(ages, len(ages))
+	names:= [4]string{"Yoshi", "Som", "Amrut", "Vlad"}
+	// fmt.Println(names, len(names))
 	
-	var str = fmt.Sprintf("my age is %v and my name is %v \n", age, name)
-	fmt.Printf(str)
+	//Slices(use arrays under the hood)
+	// var scores = []int{100,50, 60}
+
+	// fmt.Println(scores);
+	// scores=append(scores,85)
+	// fmt.Println(scores, len(scores));
+	
+	//slice ranges
+	rangeOne := names[1:3]
+	rangeTwo := names[2:]
+	rangeThree := names[:3]
+
+	fmt.Println(rangeOne)
+	fmt.Println(rangeTwo)
+	fmt.Println(rangeThree)
+	
+	rangeOne = append(rangeOne, "koopa")
+	fmt.Println(rangeOne)
+
 }
